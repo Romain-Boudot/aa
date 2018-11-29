@@ -1,0 +1,24 @@
+﻿<Grid x:Name="Home">
+
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="1*" />
+        <ColumnDefinition Width="1*" />
+        <ColumnDefinition Width="1*" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="1*" />
+        <RowDefinition Height="1*" />
+    </Grid.RowDefinitions>
+
+    <Button
+        x:Name="FlightPlaning"
+        Width="150"
+        Height="150"
+        Style="{StaticResource MaterialDesignRaisedLightButton}"
+        Background="#0050aa"
+        Foreground="White"
+        ToolTip="Resource name: MaterialDesignRaisedLightButton">
+        Flight planing
+    </Button>
+        
+</Grid>

@@ -1,0 +1,79 @@
+﻿<UserControl 
+        x:Class="back.view.Flights"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:local="clr-namespace:back.view"
+        mc:Ignorable="d" 
+        d:DesignHeight="450" d:DesignWidth="800"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="56" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <StackPanel 
+            HorizontalAlignment="Stretch"
+            Orientation="Horizontal">
+
+            <Button
+                Margin="10 10 10 10"
+                Foreground="White"
+                Width="100"
+                Style="{StaticResource MaterialDesignRaisedButton}"
+                ToolTip="Resource name: MaterialDesignRaisedButton"
+                Click="Menu_Click">
+                Menu
+            </Button>
+
+            <Button
+                Margin="10"
+                Width="150"
+                Style="{StaticResource MaterialDesignFlatButton}" 
+                ToolTip="MaterialDesignFlatButton"
+                Click="List_Click">
+                Liste des vols
+            </Button>
+            
+            <Button
+                Margin="10 10 10 10"
+                Width="150"
+                Style="{StaticResource MaterialDesignFlatButton}" 
+                ToolTip="MaterialDesignFlatButton"
+                Click="Add_Click">
+                Ajouter un vol
+            </Button>
+            
+        </StackPanel>
+
+        <UserControl
+            Margin="20"
+            Grid.Row="1"
+            VerticalAlignment="Stretch"
+            Visibility="Visible"
+            HorizontalAlignment="Stretch"
+            x:Name="Page">
+
+            <TextBlock
+                VerticalAlignment="Center"
+                Height="20"
+                Width="50">
+                Erreur
+            </TextBlock>
+
+        </UserControl>
+
+    </Grid>
+
+</UserControl>
