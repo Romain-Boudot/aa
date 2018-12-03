@@ -45,7 +45,10 @@ namespace back.model
             this.fonction = fonction;
         }
 
-
+        public static Employe GetFromId(int id)
+        {
+            return new Employe(id, "nom", "prenom", (float) 1500.50, true, "date de niassance", "pilote/copilote", "pilote/copilote");
+        }
 
     }
 }

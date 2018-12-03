@@ -2,30 +2,35 @@
 {
     public class Vol
     {
-        private int id_vol;
-        public int Id_vol { get => id_vol; set => id_vol = value; }
+        private int _id_vol;
+        public int Id_vol { get => _id_vol; set => _id_vol = value; }
 
-        private Avion avion;
-        public Avion Avion { get => avion; set => avion = value; }
+        private Avion _avion;
+        public Avion Avion { get => _avion; set => _avion = value; }
 
-        private Trajet trajet;
-        public Trajet Trajet { get => trajet; set => trajet = value; }
+        private Trajet _trajet;
+        public Trajet Trajet { get => _trajet; set => _trajet = value; }
 
-        private Employe pilote;
-        public Employe Pilote { get => pilote; set => pilote = value; }
+        private Employe _pilote;
+        public Employe Pilote { get => _pilote; set => _pilote = value; }
 
-        private Employe copilote;
-        public Employe Copilote { get => copilote; set => copilote = value; }
+        private Employe _copilote;
+        public Employe Copilote { get => _copilote; set => _copilote = value; }
 
-        public string Avion_name { get { return avion.Nom; } }
+        public string Avion_name { get { return _avion.Nom; } }
+
+        public Vol(int a, int b, int c, int d, int e)
+        {
+
+        }
 
         public Vol(int id)
         {
-            id_vol = id;
-            avion = Avion.GetFromId(0);
-            trajet = id_trajet;
-            this.id_pilote = id_pilote;
-            this.id_copilote = id_copilote;
+            _id_vol = id;
+            _avion = Avion.GetFromId(5);
+            _trajet = Trajet.GetFromId(10);
+            _pilote = Employe.GetFromId(50);
+            _copilote = Employe.GetFromId(100);
         }
     }
 }
