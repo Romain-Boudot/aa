@@ -30,14 +30,5 @@ namespace back.viewModel
             };
         }
 
-        public List<Vol> Vols
-        {
-            get { return _vols; }
-            set
-            {
-                
-            }
-        }
-
     }
 }
