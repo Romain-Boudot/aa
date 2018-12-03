@@ -37,10 +37,10 @@ namespace back.model
             this.capacite = capacite;
         }
 
-        //public static Avion GetFromId(int id)
-        //{
-        //    return new Avion(0, false, "test", 0, 0, 0);
-        //}
+        public static Avion GetFromId(int id)
+        {
+            return new Avion(0, false, "test", 0, 0, 0);
+        }
 
         public static List<Avion> GetAvions()
         {

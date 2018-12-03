@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using back.viewModel;
+
 namespace back.view
 {
     /// <summary>
@@ -23,10 +25,14 @@ namespace back.view
 
         private MainWindow _win;
 
+        private FlightsListViewModel FLVM;
+
         public FlightsList(MainWindow window)
         {
             _win = window;
+            FLVM = new FlightsListViewModel();
             InitializeComponent();
+            base.DataContext = FLVM;
         }
     }
 }

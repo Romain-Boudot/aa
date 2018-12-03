@@ -36,5 +36,11 @@ namespace back.model
             this.dest_info = dest_info;
             this.duree_info = duree_info;
         }
+
+        public static Trajet GetFromId(int id)
+        {
+            return new Trajet(id, "depart", "destination", id * 150, "dest info " + id * 150, "" + id * 150 + " minutes");
+        }
+
     }
 }
